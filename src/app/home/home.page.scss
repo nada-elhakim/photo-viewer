@@ -1,1 +1,13 @@
+.test-img, .test-img-container {
+  max-width: 100%;
+}
 
+.test-img-container {
+
+  -webkit-perspective: 1000px;
+}
+
+.test-img {
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
+}

@@ -5,12 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import {PinchZoomModule} from 'ngx-pinch-zoom';
+import {PhotoViewer} from '@ionic-native/photo-viewer/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    PinchZoomModule,
     RouterModule.forChild([
       {
         path: '',
@@ -18,6 +22,7 @@ import { HomePage } from './home.page';
       }
     ])
   ],
+  providers: [PhotoViewer, File],
   declarations: [HomePage]
 })
 export class HomePageModule {}

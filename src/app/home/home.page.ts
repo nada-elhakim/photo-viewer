@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
+  constructor(private photoViewer: PhotoViewer, private file: File) {}
+  open() {
+    this.photoViewer.show(this.file.applicationDirectory + 'www/assets/img/perennial-org-chart.jpg');
+  }
 }
